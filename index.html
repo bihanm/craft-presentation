@@ -80,6 +80,39 @@
             text-align: center;
         }
 
+        .image-placeholder {
+            background: rgba(255,255,255,0.2);
+            border: 3px dashed rgba(255,255,255,0.5);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            text-align: center;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+            max-width: 900px;
+        }
+
+        .image-placeholder-small {
+            background: rgba(255,255,255,0.2);
+            border: 2px dashed rgba(255,255,255,0.5);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            font-style: italic;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .split-content {
             display: flex;
             gap: 40px;
@@ -149,18 +182,55 @@
             position: absolute;
             border: 3px solid rgba(255,255,255,0.6);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 10px;
-            font-size: 0.9em;
         }
 
-        .circle-1 { width: 120px; height: 120px; top: 140px; left: 140px; background: rgba(255,255,255,0.3); font-weight: bold; }
-        .circle-2 { width: 200px; height: 200px; top: 100px; left: 100px; background: rgba(255,255,255,0.15); }
-        .circle-3 { width: 280px; height: 280px; top: 60px; left: 60px; background: rgba(255,255,255,0.1); }
-        .circle-4 { width: 360px; height: 360px; top: 20px; left: 20px; background: rgba(255,255,255,0.05); }
+        .circle-label {
+            position: absolute;
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 1em;
+            white-space: nowrap;
+        }
+
+        .circle-1 { 
+            width: 120px; 
+            height: 120px; 
+            top: 140px; 
+            left: 140px; 
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .circle-2 { 
+            width: 200px; 
+            height: 200px; 
+            top: 100px; 
+            left: 100px; 
+            background: rgba(255,255,255,0.15); 
+        }
+        
+        .circle-3 { 
+            width: 280px; 
+            height: 280px; 
+            top: 60px; 
+            left: 60px; 
+            background: rgba(255,255,255,0.1); 
+        }
+        
+        .circle-4 { 
+            width: 360px; 
+            height: 360px; 
+            top: 20px; 
+            left: 20px; 
+            background: rgba(255,255,255,0.05); 
+        }
+
+        .label-1 { top: 180px; left: 120px; }
+        .label-2 { top: 100px; left: -150px; }
+        .label-3 { top: 20px; left: 80px; }
+        .label-4 { top: 200px; right: -220px; }
 
         .steps {
             display: flex;
@@ -258,16 +328,44 @@
             <h1>Crafting Connection</h1>
             <div class="subtitle">How Simple Materials Transform Lives</div>
             <div class="subtitle" style="margin-top: 40px; font-size: 1.2em;">✂️ 🎨 🧶 ✨</div>
+            
+            <div class="image-grid">
+                <div class="image-placeholder-small">
+                    [IMAGE: Colorful yarn balls and knitting needles]
+                </div>
+                <div class="image-placeholder-small">
+                    [IMAGE: Assorted beads, buttons, and craft supplies]
+                </div>
+                <div class="image-placeholder-small">
+                    [IMAGE: Paper crafts, origami, colorful papers]
+                </div>
+            </div>
+            
+            <div class="subtitle" style="margin-top: 40px; font-size: 1.3em; font-weight: 600;">Monika Bihan</div>
         </div>
 
         <!-- Slide 2: My Journey -->
         <div class="slide">
             <h2>My Journey Began</h2>
             <div class="highlight">When I needed healing, I found it in my hands</div>
-            <div class="content" style="margin-top: 40px;">
+            
+            <div class="split-content" style="margin-top: 40px;">
+                <div class="split-item">
+                    <div class="image-placeholder" style="height: 250px; display: flex; align-items: center; justify-content: center;">
+                        [IMAGE: Person looking stressed/anxious, head in hands or worried expression, during COVID isolation]
+                    </div>
+                </div>
+                <div class="split-item">
+                    <div class="image-placeholder" style="height: 250px; display: flex; align-items: center; justify-content: center;">
+                        [IMAGE: Hands peacefully working on craft project - knitting, beading, or origami. Close-up, warm lighting]
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content" style="margin-top: 30px;">
                 <p>During COVID-19, like many of us, I faced isolation, uncertainty, and overwhelming anxiety. The world felt out of control.</p>
-                <p style="margin-top: 25px;">That's when I discovered something unexpected: when my mind was racing, my hands found peace in creating. Threading beads, folding paper, weaving yarn—these simple, repetitive motions became my meditation.</p>
-                <p style="margin-top: 25px; font-weight: bold;">I wasn't just making things; I was healing myself.</p>
+                <p style="margin-top: 20px;">That's when I discovered something unexpected: when my mind was racing, my hands found peace in creating. Threading beads, folding paper, weaving yarn—these simple, repetitive motions became my meditation.</p>
+                <p style="margin-top: 20px; font-weight: bold;">I wasn't just making things; I was healing myself.</p>
             </div>
         </div>
 
@@ -325,10 +423,15 @@
         <div class="slide">
             <h2>Community Impact</h2>
             <div class="ripple-diagram">
-                <div class="ripple-circle circle-4">Intergenerational Connection</div>
-                <div class="ripple-circle circle-3">Community Pride</div>
-                <div class="ripple-circle circle-2">Social Bonds</div>
-                <div class="ripple-circle circle-1">One Craft Session</div>
+                <div class="ripple-circle circle-4"></div>
+                <div class="ripple-circle circle-3"></div>
+                <div class="ripple-circle circle-2"></div>
+                <div class="ripple-circle circle-1"></div>
+                
+                <div class="circle-label label-1">One Craft Session</div>
+                <div class="circle-label label-2">Social Bonds</div>
+                <div class="circle-label label-3">Community Pride</div>
+                <div class="circle-label label-4">Intergenerational Connection</div>
             </div>
             <div class="content" style="margin-top: 30px;">
                 <p>When we bring craft programs to senior centers, something magical happens. Withdrawn seniors start sharing memories. Someone who felt 'useless' becomes the expert teaching others.</p>
@@ -337,23 +440,23 @@
 
         <!-- Slide 6: Getting Started -->
         <div class="slide">
-            <h2>Getting Started</h2>
+            <h2>Getting Started: Pilot Program</h2>
             <div class="highlight">Start small. Start simple. Start today.</div>
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Gather Materials</h3>
-                    <p>Simple, accessible supplies anyone can find</p>
+                    <h3>One Center</h3>
+                    <p>3-month pilot with 20-25 seniors, weekly sessions</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Create Space</h3>
-                    <p>A welcoming environment for creativity</p>
+                    <h3>Build Partnerships</h3>
+                    <p>Local craft stores, schools for intergenerational programs</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Let Flow</h3>
-                    <p>No pressure, just creativity and connection</p>
+                    <h3>Measure Impact</h3>
+                    <p>Track attendance, collect testimonials, before/after surveys</p>
                 </div>
             </div>
         </div>
